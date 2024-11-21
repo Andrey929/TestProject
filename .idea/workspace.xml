@@ -5,34 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e42cfe7b-6a38-424f-a762-db9c2a285c24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyTestProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Repositories/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/mytestproject/Controllers/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/mytestproject/DTO/ProductDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/mytestproject/Model/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/mytestproject/MyTestProjectApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/mytestproject/Service/ProductService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/mytestproject/ServletInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/mytestproject/ProductServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ef97a363-ae27-4f1f-85a2-34304acbd748.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ef97a363-ae27-4f1f-85a2-34304acbd748.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Data/ProductData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/MyTestProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/MyTestProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mytestproject/Service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/mytestproject/ProductServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +24,16 @@
         <option value="HTML File" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -75,11 +58,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml.app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "JUnit.ProductServiceTest.createProductTest.executor": "Run",
     "JUnit.ProductServiceTest.deleteProductTest.executor": "Run",
     "JUnit.ProductServiceTest.executor": "Run",
     "JUnit.ProductServiceTest.getByNameTest.executor": "Run",
     "JUnit.ProductServiceTest.updateProductTest.executor": "Run",
+    "Maven.MyTestProject [clean,package].executor": "Run",
+    "Maven.MyTestProject [org.apache.maven.plugins:maven-war-plugin:3.4.0:war].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -88,8 +77,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MyTestProjectApplication.executor": "Run",
-    "git-widget-placeholder": "t2",
+    "git-widget-placeholder": "t3",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Study/Java/MyTestProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -104,12 +94,20 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Study\Java\MyTestProject" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.mytestproject.DTO" />
       <recent name="org.example.mytestproject" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MyTestProjectApplication">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.app: Compose Deployment">
     <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyTestProject" />
       <extension name="coverage">
@@ -125,70 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.createProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTestProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.mytestproject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.mytestproject" />
-      <option name="MAIN_CLASS_NAME" value="org.example.mytestproject.ProductServiceTest" />
-      <option name="METHOD_NAME" value="createProductTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTest.deleteProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTestProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.mytestproject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.mytestproject" />
-      <option name="MAIN_CLASS_NAME" value="org.example.mytestproject.ProductServiceTest" />
-      <option name="METHOD_NAME" value="deleteProductTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTest.getByNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTestProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.mytestproject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.mytestproject" />
-      <option name="MAIN_CLASS_NAME" value="org.example.mytestproject.ProductServiceTest" />
-      <option name="METHOD_NAME" value="getByNameTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTest.updateProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyTestProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.mytestproject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.mytestproject" />
-      <option name="MAIN_CLASS_NAME" value="org.example.mytestproject.ProductServiceTest" />
-      <option name="METHOD_NAME" value="updateProductTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyTestProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="MyTestProject" />
@@ -197,13 +131,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="latest" />
+          <option name="containerName" value="TestProject" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.app: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.ProductServiceTest" />
-        <item itemvalue="JUnit.ProductServiceTest.createProductTest" />
-        <item itemvalue="JUnit.ProductServiceTest.deleteProductTest" />
-        <item itemvalue="JUnit.ProductServiceTest.updateProductTest" />
-        <item itemvalue="JUnit.ProductServiceTest.getByNameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +211,8 @@
       <option name="presentableId" value="Default" />
       <updated>1731941658662</updated>
       <workItem from="1731941659729" duration="18321000" />
-      <workItem from="1732205981103" duration="4741000" />
+      <workItem from="1732205981103" duration="6774000" />
+      <workItem from="1732213544945" duration="3994000" />
     </task>
     <servers />
   </component>

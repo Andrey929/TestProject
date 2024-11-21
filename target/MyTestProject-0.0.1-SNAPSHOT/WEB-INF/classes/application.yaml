@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: YarA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    username: test
+    password: 1234
+    url: jdbc:postgresql://localhost:5432/testDB

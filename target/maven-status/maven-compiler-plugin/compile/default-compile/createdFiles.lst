@@ -1,0 +1,7 @@
+org\example\mytestproject\Repositories\ProductRepository.class
+org\example\mytestproject\Service\ProductService.class
+org\example\mytestproject\ServletInitializer.class
+org\example\mytestproject\Model\Product.class
+org\example\mytestproject\Controllers\ProductController.class
+org\example\mytestproject\MyTestProjectApplication.class
+org\example\mytestproject\DTO\ProductDTO.class
