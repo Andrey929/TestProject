@@ -1,16 +1,18 @@
 package org.example.mytestproject.Controllers;
 
+import lombok.RequiredArgsConstructor;
 import org.example.mytestproject.DTO.ProductDTO;
 import org.example.mytestproject.Model.Product;
 import org.example.mytestproject.Service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/product")
 public class ProductController {
-    ProductService service = new ProductService();
+
+    private final ProductService service;
     @PostMapping("/add")
     public ResponseEntity<?> addProduct(@RequestBody ProductDTO prodDTO){
         try {

@@ -1,78 +1,73 @@
 package org.example.mytestproject.Service;
 
-import org.example.mytestproject.Data.ProductData;
+import lombok.RequiredArgsConstructor;
 import org.example.mytestproject.Model.Product;
+import org.example.mytestproject.Repositories.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-
+@RequiredArgsConstructor
 @Service
 public class ProductService {
-    ProductData productData = new ProductData();
+
+    private final ProductRepository productRepository;
+
+
 
 
     public boolean createProduct(String name,String description, double price,boolean availability){
         if (validate(name,description,price)) {
-            productData.addProduct(new Product(name, description, price, availability));
+            productRepository.save(new Product(name, description, price, availability));
             return true;
         }else return false;
     }
 
     public ArrayList<Product> getAllProducts(){
-        return productData.getAll();
+        return (ArrayList<Product>) productRepository.findAll();
     }
 
     public Product getByName(String name){
-        return productData.getProductByName(name);
+        return productRepository.findByName(name).orElseThrow();
     }
 
-    public boolean deleteProduct(String name){
-        if (productData.deleteProductByName(name)) {
-            return true;
-        }else return false;
+    public void deleteProduct(String name){
+        productRepository.deleteById(productRepository.findByName(name).orElseThrow().getId());
     }
 
 
     public boolean updateName(String name,String newName){
-        Product prod = productData.getProductByName(name);
-        if (prod != null) {
+        Product prod = productRepository.findByName(name).orElseThrow();
             if (validate(newName,prod.getDescription())) {
                 prod.setName(newName);
-                productData.updateProduct(name, prod);
+                productRepository.save(prod);
                 return true;
             }else return false;
-        }else return false;
+
     }
 
     public boolean updateDescription(String name,String newDescription){
-        Product prod = productData.getProductByName(name);
-        if (prod != null) {
+        Product prod = productRepository.findByName(name).orElseThrow();
             if (validate(name,newDescription)) {
                 prod.setDescription(newDescription);
-                productData.updateProduct(name, prod);
+                productRepository.save(prod);
                 return true;
             }else return false;
-        }else return false;
     }
 
     public boolean updatePrice(String name,double newPrice){
-        Product prod = productData.getProductByName(name);
-        if (prod != null) {
+        Product prod = productRepository.findByName(name).orElseThrow();
             if (validate(name, prod.getDescription(),newPrice)) {
                 prod.setPrice(newPrice);
-                productData.updateProduct(name, prod);
+                productRepository.save(prod);
                 return true;
             }else return false;
-        }else return false;
     }
 
-    public boolean updateAvailability(String name,boolean availability){
-        Product prod = productData.getProductByName(name);
-        if (prod != null) {
-                prod.setAvailability(availability);
-                productData.updateProduct(name, prod);
-                return true;
-        }else return false;
+    public void updateAvailability(String name,boolean availability){
+        Product prod = productRepository.findByName(name).orElseThrow();
+        prod.setAvailability(availability);
+        productRepository.save(prod);
+
     }
 
 
