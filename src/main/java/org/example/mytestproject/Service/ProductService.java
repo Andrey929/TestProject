@@ -6,6 +6,9 @@ import org.example.mytestproject.Repositories.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 @RequiredArgsConstructor
 @Service
 public class ProductService {
@@ -69,6 +72,50 @@ public class ProductService {
         productRepository.save(prod);
 
     }
+
+
+    public ArrayList<Product> filterProduct(String param){
+        return (ArrayList<Product>) productRepository.findAll().stream().filter(user -> user.getName().toLowerCase().contains(param.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    public ArrayList<Product> filterProductByPrice(Double price,String param){
+        if (param.isBlank()) {
+            return (ArrayList<Product>) productRepository.findAll().stream().filter(user ->  price.equals(user.getPrice())).collect(Collectors.toList());
+        }else return myFilterProductByPrice(price,param);
+    }
+
+    private ArrayList<Product> myFilterProductByPrice(double price,String param){
+        ArrayList<Product> products = (ArrayList<Product>) productRepository.findAll();
+        if (param.equals("<")) {
+            return (ArrayList<Product>) products.stream().filter(product -> product.getPrice() < price)
+                    .collect(Collectors.toList());
+        } else if (param.equals(">")) {
+            return (ArrayList<Product>) products.stream().filter(product -> product.getPrice() > price)
+                    .collect(Collectors.toList());
+        }else return products;
+    }
+
+    public ArrayList<Product> filterByAvailability(boolean param){
+        return (ArrayList<Product>) productRepository.findAll().stream().filter(product -> product.isAvailability() == param).collect(Collectors.toList());
+    }
+
+    public ArrayList<Product> sortProduct(String tmp){
+        if (tmp.equals("name")) {
+            return (ArrayList<Product>) productRepository.findAll().stream()
+                    .sorted(Comparator.comparing(Product::getName))
+                    .collect(Collectors.toList());
+        } else if (tmp.equals("price")) {
+            return (ArrayList<Product>) productRepository.findAll().stream()
+                    .sorted(Comparator.comparing(Product::getPrice))
+                    .collect(Collectors.toList());
+        } else {
+            return new ArrayList<>(productRepository.findAll());
+        }
+
+    }
+
+
 
 
 

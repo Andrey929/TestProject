@@ -1,13 +1,17 @@
 package org.example.mytestproject.Controllers;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import lombok.RequiredArgsConstructor;
 import org.example.mytestproject.DTO.ProductDTO;
 import org.example.mytestproject.Model.Product;
 import org.example.mytestproject.Service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
+@Validated
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -83,6 +87,30 @@ public class ProductController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(e.getMessage());
         }
+    }
+
+    @GetMapping("/filterByName")
+    public ResponseEntity<?> filterProduct(@RequestParam("param") @Size(max = 255)  String param){
+        return ResponseEntity.ok(service.filterProduct(param));
+    }
+
+    @GetMapping("/filterByPriceAndParam")
+    public ResponseEntity<?> filterProductByPrice(@RequestParam("param") @Size(max = 1)  String param, @RequestParam("price") @Min(0) double price){
+        return ResponseEntity.ok(service.filterProductByPrice(price,param));
+    }
+
+    @GetMapping("/filterByPrice")
+    public ResponseEntity<?> filterProductByPrice(@RequestParam("price") @Min(0) double price){
+        return ResponseEntity.ok(service.filterProductByPrice(price,""));
+    }
+
+    @GetMapping("/filterByAvailability")
+    public ResponseEntity<?> filterProductByAvailability(@RequestParam("param") boolean param){
+        return ResponseEntity.ok(service.filterByAvailability(param));
+    }
+    @GetMapping("/sort")
+    public ResponseEntity<?> sortProduct(@RequestParam("param") String param){
+        return ResponseEntity.ok(service.sortProduct(param));
     }
 
 }
